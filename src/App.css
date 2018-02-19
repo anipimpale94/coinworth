@@ -1,0 +1,94 @@
+.root{
+  background-color: #F1F2F7;
+}
+.App{
+  background-color: #F1F2F7;
+}
+
+.App-logos {
+  animation: App-logo-spin infinite 20s linear;
+  width: 10vh;
+  height: 10vh;
+  overflow: hidden;
+}
+
+.App-logo-name {
+  width: 25vh;
+  height: 10vh;
+}
+
+.App-header {
+  height: 12vh;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+a {
+  text-decoration: none;
+  color: #74d14c;  
+}
+
+.Box {
+  height: 30vh;
+  width: 20vh;
+  border-style: none; 
+  border-radius: 10px;
+  background-color: white;
+  margin: 2vh;
+  float: left;
+}
+
+.grid-container {
+  width: 95%;
+  margin: auto auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #536161;
+  
+}
+
+.coinImages {
+  width: 10vh;
+  height: 10vh;
+}
+
+.main-container {
+  text-align: center
+}
+
+.jumbotron {
+  position: relative;
+  padding: 2.5vh !important;
+  margin-bottom: 0 !important;
+  background-color: black !important;
+}
+
+.container-fluid{
+  padding: 0 !important;
+}
+
+.coinImages{
+  margin-top: 5vh;
+  border: 0px solid grey;
+}
+
+.coinName {
+  font-size: 2vh;
+}
+
+.btn-info{
+  font-size: 2.5vh !important; 
+}
