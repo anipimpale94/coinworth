@@ -56,7 +56,7 @@ class CryptoBox extends Component {
                     <img className="coinImages" alt={this.props.coinWorthInfo[0] + "image"} src={baseURL + this.props.coinTypeInfo.ImageUrl} />
                     <div className="coinName">{this.props.coinTypeInfo.CoinName}</div>
                     <div className="btn btn-info disabled">${this.state.coinValue}</div>
-                    <div className="daily" style={statusStyle}>Chg. 24H  {FASymbol}</div>
+                    <div className="coinName" style={statusStyle}>Chg. 24H  {FASymbol}</div>
                 </div>
             </div>
         );

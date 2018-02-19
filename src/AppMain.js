@@ -65,7 +65,6 @@ class AppMain extends Component {
 
         return (
             <div className="main-container">
-                <br/ >
                 <div className="grid-container">
                     {list}
                 </div> 
