@@ -12,6 +12,12 @@
   overflow: hidden;
 }
 
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
 .App-logo-name {
   width: 25vh;
   height: 10vh;
@@ -27,11 +33,6 @@
 
 .App-intro {
   font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 
 a {
@@ -91,4 +92,25 @@ a {
 
 .btn-info{
   font-size: 2.5vh !important; 
+  
+}
+
+.increaseValue {
+  background-color: green;
+  animation: coinValueChangeUp 5s !important;
+}
+
+@keyframes coinValueChangeUp {
+  from { background-color: green; }
+  to { background-color: #17a2b8; }
+}
+
+.decreaseValue {
+  background-color: red;
+  animation: coinValueChangeDown 5s !important; 
+}
+
+@keyframes coinValueChangeDown {
+  from { background-color: red; }
+  to { background-color: #17a2b8; }
 }

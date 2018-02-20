@@ -36,7 +36,7 @@ class AppMain extends Component {
             console.log(error);
         });
         this.refreshCall = this.refreshCall.bind(this);
-        this.interval = setInterval(this.refreshCall, 500);
+        this.interval = setInterval(this.refreshCall, 1000);
     }    
 
     refreshCall() {

@@ -10,9 +10,10 @@ class CryptoBox extends Component {
         super(props);
 
         this.state = {
-            coinValue: 0.00,
+            coinValue: null,
             change24hr: props.coinWorthInfo[1].USD.CHANGE24HOUR,
             status: 'blue',
+            valueChange: ''
         };
     }
     
@@ -32,10 +33,12 @@ class CryptoBox extends Component {
 
         if(lastValue !== newValue) {
             if(lastValue > newValue) {
-                this.setState({ coinValue: newValue });
+                this.setState({ coinValue: newValue, valueChange: 'up'});
+                console.log("up", this.props.coinWorthInfo[0]);
             }
             else {
-                this.setState({ coinValue: newValue });
+                this.setState({ coinValue: newValue, valueChange: 'down'});
+                console.log("down", this.props.coinWorthInfo[0]);
             }
         }
     }
@@ -50,12 +53,20 @@ class CryptoBox extends Component {
         if(this.state.status === 'red'){
             FASymbol = <FAdown style={statusStyle}/>
         }
+        var coinValueChange = <div className="btn btn-info disabled">${this.state.coinValue}</div>;;
+        if(this.state.valueChange === 'up') {
+            coinValueChange = <div className="increaseValue btn btn-info disabled">${this.state.coinValue}</div>;
+        }
+        else if(this.state.valueChange === 'down') {
+            coinValueChange = <div className="decreaseValue btn btn-info disabled">${this.state.coinValue}</div>;
+        }
+
         return (
             <div className="mainBox">
                 <div className="Box">
                     <img className="coinImages" alt={this.props.coinWorthInfo[0] + "image"} src={baseURL + this.props.coinTypeInfo.ImageUrl} />
                     <div className="coinName">{this.props.coinTypeInfo.CoinName}</div>
-                    <div className="btn btn-info disabled">${this.state.coinValue}</div>
+                    {coinValueChange}
                     <div className="coinName" style={statusStyle}>Chg. 24H  {FASymbol}</div>
                 </div>
             </div>
