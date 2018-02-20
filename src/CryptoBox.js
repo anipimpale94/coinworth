@@ -34,11 +34,9 @@ class CryptoBox extends Component {
         if(lastValue !== newValue) {
             if(lastValue > newValue) {
                 this.setState({ coinValue: newValue, valueChange: 'up'});
-                console.log("up", this.props.coinWorthInfo[0]);
             }
             else {
                 this.setState({ coinValue: newValue, valueChange: 'down'});
-                console.log("down", this.props.coinWorthInfo[0]);
             }
         }
     }
