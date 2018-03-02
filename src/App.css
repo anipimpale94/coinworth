@@ -1,7 +1,7 @@
 .root{
   background-color: #F1F2F7;
-  
 }
+
 .App{
   background-color: #F1F2F7;
   min-height: 100vh;
@@ -136,7 +136,7 @@ a {
 
 .search-input{
   height: 5vh;
-  width: 20vh;
+  width: 25vh;
   margin: 3vh;
   font-size: 2.7vh;
   border-style: none; 
