@@ -8,10 +8,10 @@ class AppMain extends Component {
     constructor() {
         super();
 
-    
         this.state = {
             coins: null,
             coinList: null,
+            searchCoin: "Search Coin",
         };
     }
     
@@ -55,22 +55,51 @@ class AppMain extends Component {
         });
     }
 
-    render() {
+    updateSearch(event) {
+        if(this.state.searchCoin === "Search Coin") {
+            this.setState({searchCoin: ""});
+        }
+        else
+            this.setState({searchCoin: event.target.value});
+    }
+
+
+
+    createCoinDisplay() {
         var coinWorthInfo = this.state.coins;
         var coinTypeInfo = this.state.coinList;
-        //console.log(coinWorthInfo);
+        var searchCoin = this.state.searchCoin;
         var list = [];
         if(coinWorthInfo !== null && coinTypeInfo !== null) {
             Object.entries(coinWorthInfo).map((element, index)=> {
-                list.push(<CryptoBox key={element[0]} coinWorthInfo={element} coinTypeInfo={coinTypeInfo[element[0]]} />);
+
+                if(searchCoin === "Search Coin") {
+                    //console.log(element);
+                    list.push(<CryptoBox key={element[0]} coinWorthInfo={element} coinTypeInfo={coinTypeInfo[element[0]]} />);
+                }
+                else if(coinTypeInfo[element[0]].FullName.toUpperCase().includes(searchCoin.toUpperCase())) {
+                    list.push(<CryptoBox key={element[0]} coinWorthInfo={element} coinTypeInfo={coinTypeInfo[element[0]]} />);
+                }
             }, {});
         }
+        return list;
+    }
 
-
+    render() {
         return (
             <div className="main-container">
                 <div className="grid-container">
-                    {list}
+                    <div className="search">
+                        <input type="text"
+                            onChange={this.updateSearch.bind(this)}
+                            className="search-input"
+                            onClick={this.updateSearch.bind(this)}
+                            placeholder={this.state.searchCoin}
+                        />
+                    </div>
+                    <div className="coin-container">
+                        {this.createCoinDisplay()}
+                    </div>
                 </div> 
             </div>
         );

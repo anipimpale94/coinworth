@@ -1,8 +1,10 @@
 .root{
   background-color: #F1F2F7;
+  
 }
 .App{
   background-color: #F1F2F7;
+  min-height: 100vh;
 }
 
 .App-logos {
@@ -58,7 +60,8 @@ a {
   align-items: center;
   justify-content: center;
   background-color: #536161;
-  
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .coinImages {
@@ -67,7 +70,9 @@ a {
 }
 
 .main-container {
-  text-align: center
+  text-align: center;
+  min-height: 80vh;
+  padding-bottom: 10px;
 }
 
 .jumbotron {
@@ -113,4 +118,28 @@ a {
 @keyframes coinValueChangeDown {
   from { background-color: red; }
   to { background-color: #17a2b8; }
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+
+.coin-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.search-input{
+  width: 25vh;
+  margin: 3vh;
+  border-style: none; 
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+  color: #74d14c;
 }

@@ -9,7 +9,8 @@ class App extends Component {
   render() {
     return (
       <div className="App container">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>   
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
         <div className="jumbotron">
           <div className="container-fluid">
             <div className="col-xl-4">
