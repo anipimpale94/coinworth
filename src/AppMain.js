@@ -25,7 +25,7 @@ class AppMain extends Component {
 
         const baseURL = 'https://min-api.cryptocompare.com/data/pricemultifull?';
         const coin = ['BTC', 'ETH', 'XRP', 'LTC', 'BCH', 'ETC', 'XVG', 'EOS', 'TRX', 'NEO',
-                      'ELA', 'ZEC', 'DASH', 'VEN', 'XMR', 'BCPT', 'LSK', 'XVG', 'ADA', 'BNB',
+                      'ELA', 'ZEC', 'VEN', 'XMR', 'BCPT', 'LSK', 'XVG', 'ADA', 'BNB',
                       'IOST'];
         axios.get(`${baseURL}fsyms=${coin}&tsyms=USD`)
         .then(res => {
@@ -42,7 +42,7 @@ class AppMain extends Component {
     refreshCall() {
         const baseURL = 'https://min-api.cryptocompare.com/data/pricemultifull?';
         const coin = ['BTC', 'ETH', 'XRP', 'LTC', 'BCH', 'ETC', 'XVG', 'EOS', 'TRX', 'NEO',
-                      'ELA', 'ZEC', 'DASH', 'VEN', 'XMR', 'BCPT', 'LSK', 'XVG', 'ADA', 'BNB',
+                      'ELA', 'ZEC', 'VEN', 'XMR', 'BCPT', 'LSK', 'XVG', 'ADA', 'BNB',
                       'IOST'];
         axios.get(`${baseURL}fsyms=${coin}&tsyms=USD`)
         .then(res => {
